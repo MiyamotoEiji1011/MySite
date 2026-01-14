@@ -11,7 +11,7 @@ export default function CodeButton({
   href,
   onClick,
 }: CodeButtonProps) {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (_e: React.MouseEvent<HTMLButtonElement>) => {
     if (href) {
       window.location.href = href;
     }

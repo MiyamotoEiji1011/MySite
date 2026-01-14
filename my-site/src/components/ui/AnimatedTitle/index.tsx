@@ -24,7 +24,7 @@ export default function AnimatedTitle({
     }, 100);
 
     // 自動アニメーション（オプション）
-    let intervalTimer: NodeJS.Timeout | null = null;
+    let intervalTimer: ReturnType<typeof setInterval> | null = null;
     if (autoAnimate && animationInterval > 0) {
       intervalTimer = setInterval(() => {
         setIsActive(prev => !prev);

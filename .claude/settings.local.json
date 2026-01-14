@@ -12,7 +12,8 @@
       "Bash(fi)",
       "Bash(done)",
       "Bash(ls:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(npm run build:*)"
     ],
     "additionalDirectories": [
       "c:\\Users\\eiji1\\OneDrive\\Documents\\Mine\\MySite",
