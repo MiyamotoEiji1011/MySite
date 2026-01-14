@@ -1,0 +1,204 @@
+.frontText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.frontText__frame {
+  width: 100%;
+  max-width: 1440px;
+  padding: 15px 20px; /* 左右のパディングを少し狭くして、コンテンツ幅を広げます */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 要素を中央に配置します */
+  gap: 40px;
+}
+
+.frontText__frame.is-fixed {
+  width: 1440px;
+}
+
+/* VS Code風エディタ */
+.frontText__editor {
+  flex: 1 1 auto;
+  width: 100%;
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* エディタヘッダー */
+.frontText__editorHeader {
+  background: #2d2d2d;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.frontText__editorDots {
+  display: flex;
+  gap: 8px;
+}
+
+.frontText__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.frontText__dot--red {
+  background: #ff5f56;
+}
+
+.frontText__dot--yellow {
+  background: #ffbd2e;
+}
+
+.frontText__dot--green {
+  background: #27c93f;
+}
+
+.frontText__editorTitle {
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.frontText__editorSpacer {
+  flex: 1;
+}
+
+/* エディタコンテンツ */
+.frontText__editorContent {
+  display: flex;
+  padding: 20px 0;
+  min-height: 200px;
+}
+
+.frontText__lineNumbers {
+  padding: 0 20px;
+  text-align: right;
+  color: #858585;
+  font-size: 36px;
+  line-height: 1.6;
+  user-select: none;
+}
+
+.frontText__lineNumber {
+  font-weight: 400;
+}
+
+.frontText__codeArea {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.frontText__codeLine {
+  font-size: 36px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* シンタックスハイライト */
+.frontText__keyword {
+  color: #c586c0;
+  font-weight: 500;
+}
+
+.frontText__variable {
+  color: #9cdcfe;
+}
+
+.frontText__operator {
+  color: #d4d4d4;
+}
+
+.frontText__string {
+  color: #ce9178;
+}
+
+.frontText__punctuation {
+  color: #d4d4d4;
+}
+
+/* ボタン */
+.frontText__btnWrap {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* --- ボタンアニメーション --- */
+/* CodeButton.cssのスタイルを拡張 */
+.code-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  /* 元のボタンのpaddingを無効化し、テキスト側で制御 */
+  padding: 0;
+}
+
+.code-button__text {
+  display: block;
+  padding: 12px 32px; /* 元のボタンのpaddingに合わせる */
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.code-button__text--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+}
+
+.code-button:hover .code-button__text {
+  transform: translateY(-100%);
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+  .frontText__lineNumbers {
+    font-size: 28px;
+    padding: 0 16px;
+  }
+
+  .frontText__codeLine {
+    font-size: 28px;
+  }
+
+  .frontText__frame {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .frontText__frame {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+
+  .frontText__lineNumbers {
+    font-size: 20px;
+    padding: 0 12px;
+  }
+
+  .frontText__codeLine {
+    font-size: 20px;
+  }
+
+  .frontText__btnWrap {
+    /* 既にデフォルトで縦並びになっているため、特別なマージン調整は不要 */
+  }
+
+  .frontText__editorContent {
+    min-height: 150px;
+  }
+}

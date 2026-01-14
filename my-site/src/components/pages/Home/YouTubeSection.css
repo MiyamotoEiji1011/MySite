@@ -1,0 +1,119 @@
+.minimal-video-section {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.minimal-video-section__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.minimal-video-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* プロフィールリンク */
+.minimal-video-section__profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.15);
+}
+
+.minimal-video-section__profile-link:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.2);
+}
+
+.minimal-video-section__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.minimal-video-grid {
+  display: grid;
+  width: 100%;
+  /* 常に2列固定（レスポンシブで1列にしない） */
+  grid-template-columns: repeat(2, 1fr);
+  /* 動画同士の隙間（スマホ等で狭すぎる場合はここを調整） */
+  gap: 16px;
+}
+
+.minimal-video-card {
+  width: 100%;
+  background: #000;
+  border-radius: 8px; /* 角を少し丸くすると高品質に見えます */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+/* ホバー時に少し浮き上がる演出（不要なら削除してください） */
+.minimal-video-card:hover {
+  transform: scale(1.02);
+}
+
+.video-aspect-box {
+  position: relative;
+  width: 100%;
+  /* 16:9の比率を維持 */
+  aspect-ratio: 16 / 9;
+}
+
+.video-aspect-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .minimal-video-section {
+    padding: 40px 0;
+  }
+
+  .minimal-video-section__profile-link {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+  .minimal-video-section__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .minimal-video-section {
+    padding: 30px 0;
+  }
+
+  .minimal-video-section__container {
+    padding: 0 16px;
+  }
+
+  .minimal-video-section__profile-link {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .minimal-video-section__content {
+    gap: 20px;
+  }
+}

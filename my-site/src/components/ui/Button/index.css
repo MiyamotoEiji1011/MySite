@@ -1,0 +1,62 @@
+.uiBtn {
+  /* Figma: 320 x 100 / 角丸 20 */
+  width: 200px;
+  height: 70px;
+  border-radius: 20px;
+
+  /* 通常：黒背景（枠なし想定だったけど、要望で枠線は黒） */
+  background: #000;
+  border: 2px solid #000;
+
+  /* 影：通常なし */
+  box-shadow: none;
+
+  /* 中央揃え */
+  display: grid;
+  place-items: center;
+
+  /* アニメ */
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
+
+  /* a / button 共通 */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.uiBtn__label {
+  /* フォント：JARO / 32 */
+  font-family: "JARO", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0;
+
+  /* 通常：白文字 */
+  color: #fff;
+
+  /* バランス崩さない */
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.uiBtn:hover {
+  /* hover：背景白、枠線黒、文字黒、ドロップシャドウ */
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+.uiBtn:hover .uiBtn__label {
+  color: #000;
+}
+
+.uiBtn:active {
+  transform: translateY(1px);
+}
+
+/* フォーカス見える化（アクセシビリティ） */
+.uiBtn:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, 0.35);
+  outline-offset: 4px;
+}

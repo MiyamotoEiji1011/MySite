@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+
+/* From Uiverse.io by gharsh11032000 */
+.article-card {
+  width: 320px;
+  height: 350px;
+  padding: 20px;
+  color: white !important;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 5px solid transparent;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform-origin: right bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  text-decoration: none;
+}
+
+.article-card * {
+  color: inherit;
+}
+
+.article-card-main-content {
+  flex: 1;
+}
+
+.article-card-header span:first-child {
+  font-weight: 600;
+  color: #717171;
+  margin-right: 4px;
+}
+
+.article-card .article-card-heading {
+  font-size: 24px;
+  margin: 24px 0 16px;
+  font-weight: 600;
+  color: white !important;
+  font-family: 'Jaro', sans-serif;
+}
+
+.article-card-categories {
+  display: flex;
+  gap: 8px;
+}
+
+.article-card-categories span {
+  background-color: #ed47ff;
+  padding: 4px 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 50em;
+}
+
+.article-card-excerpt {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+  font-family: "DotGothic16", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+}
+
+.article-card:hover {
+  rotate: 8deg;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .article-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}

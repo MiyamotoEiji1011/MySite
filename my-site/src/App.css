@@ -1,0 +1,42 @@
+.App {
+  position: relative;
+}
+
+.App > *:not(canvas) {
+  position: relative;
+}
+
+/* YouTubeSectionとXSectionの水平・垂直レイアウト */
+.sections-container {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* PC: 水平レイアウト */
+@media (min-width: 901px) {
+  .sections-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sections-container > section {
+    flex: 1;
+    min-width: 0;
+    padding: 60px 10px;
+  }
+}
+
+/* モバイル (720px以下): 垂直レイアウト */
+@media (max-width: 900px) {
+  .sections-container {
+    flex-direction: column;
+  }
+
+  .sections-container > section {
+    width: 100%;
+  }
+}

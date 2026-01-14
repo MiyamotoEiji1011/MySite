@@ -1,0 +1,242 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Google Modern Design Theme */
+.social {
+  width: 100%;
+  background-color: transparent; /* 背景を透明にしてCodeBackgroundを表示 */
+  padding: 60px 0 100px;
+  font-family: 'Jaro', sans-serif;
+}
+
+.social__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: flex-start;
+}
+
+/* Blocks - Google Style Card */
+.social__block {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 28px;
+  padding: 32px;
+  width: 540px;
+  flex-shrink: 0;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__block:hover {
+  box-shadow: 0 1px 3px rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+}
+
+/* Header & Title */
+.social__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.social__icon {
+  width: 32px;
+  height: 32px;
+}
+.social__icon--youtube { color: #ff0000; }
+.social__icon--x { color: #000000; }
+
+.social__title {
+  font-family: 'Jaro', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  color: #202124;
+  letter-spacing: 0.5px;
+}
+
+/* Chip Style Links */
+.social__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 100px;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.social__chip:hover {
+  background: #f1f3f4;
+  border-color: #d2d4d7;
+}
+
+.social__chipIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.social__chip--youtube .social__chipIcon {
+  color: #ff0000;
+}
+
+.social__chip--x .social__chipIcon {
+  color: #000000;
+}
+
+.social__chipText {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1a73e8; /* Google Blue */
+  font-weight: 500;
+}
+
+/* YouTube Videos Grid */
+.social__videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  padding-bottom: 40px;
+}
+
+/* Google-style Scrollbar */
+.social__videos::-webkit-scrollbar { width: 8px; }
+.social__videos::-webkit-scrollbar-track { background: transparent; }
+.social__videos::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+/* Video Card Design */
+.video-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f5f5f5;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+}
+
+.video-card-thumbnail {
+  width: 100%;
+  height: 100%;
+  background: #e0e0e0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.video-card-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-card-thumbnail-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d0d0d0;
+}
+
+.video-card-thumbnail-placeholder svg {
+  width: 48px;
+  height: 48px;
+  color: #999;
+}
+
+.video-card-button {
+  max-width: 120px;
+  min-width: 80px;
+  border-radius: 8px;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Hover Effects */
+.video-card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.video-card:hover .video-card-button {
+  opacity: 1;
+}
+
+/* Twitter Embed Box */
+.social__twitterEmbed {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #f1f3f4;
+  height: 600px;
+}
+
+/* Responsive */
+@media (max-width: 1140px) {
+  .social__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .social__block { width: 100%; max-width: 600px; }
+}
+
+@media (max-width: 600px) {
+  .social__videos {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 30px;
+    height: auto;
+    max-height: 600px;
+  }
+  .social__block {
+    padding: 20px;
+  }
+  .video-card {
+    border-radius: 12px;
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+    padding: 130px;
+  }
+  .video-card-button {
+    font-size: 0.85rem;
+    padding: 12px 12px;
+  }
+}

@@ -1,0 +1,24 @@
+.about {
+  min-height: 100vh;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 50px;
+}
+
+@media (max-width: 720px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

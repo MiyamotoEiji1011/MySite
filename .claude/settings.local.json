@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(npm run dev:*)",
+      "Bash(grep:*)",
+      "Bash(for i in {2..11})",
+      "Bash(do file=\"learning-typescript copy $i.md\")",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(then sed -i \"s/slug: \"\"learning-typescript\"\"/slug: \"\"learning-typescript-copy-$i\"\"/\" \"$file\")",
+      "Bash(echo:*)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(tree:*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\eiji1\\OneDrive\\Documents\\Mine\\MySite"
+    ]
+  }
+}
