@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // GitHub Pages用のベースパス設定
+  base: '/MySite/',
   // gray-matterがNode.jsのBufferを使用するため、ブラウザ向けにpolyfillを設定
   define: {
     'global': 'globalThis',

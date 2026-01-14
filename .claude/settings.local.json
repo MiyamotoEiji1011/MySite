@@ -15,7 +15,8 @@
       "Bash(tree:*)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\eiji1\\OneDrive\\Documents\\Mine\\MySite"
+      "c:\\Users\\eiji1\\OneDrive\\Documents\\Mine\\MySite",
+      "c:\\Users\\eiji1\\OneDrive\\Documents\\Mine\\MySite\\.github"
     ]
   }
 }
