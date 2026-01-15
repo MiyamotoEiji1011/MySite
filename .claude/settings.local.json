@@ -13,7 +13,8 @@
       "Bash(done)",
       "Bash(ls:*)",
       "Bash(tree:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(dir /s /b \"c:\\\\Users\\\\eiji1\\\\OneDrive\\\\Documents\\\\Mine\\\\MySite\\\\my-site\\\\dist\\\\*.html\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\eiji1\\OneDrive\\Documents\\Mine\\MySite",
