@@ -14,7 +14,7 @@ const Header = () => {
       {/* 左側のロゴエリア */}
       <div className="logo">
         <Link to="/">
-          <img src="/images/logos/logo_white.svg" alt="Logo" />
+          <img src={`${import.meta.env.BASE_URL}images/logos/logo_white.svg`} alt="Logo" />
         </Link>
       </div>
 

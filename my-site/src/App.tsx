@@ -75,8 +75,11 @@ function Home() {
 }
 
 export default function App() {
+  // GitHub Pages用のベースパス（vite.config.tsのbaseと合わせる）
+  const basename = import.meta.env.BASE_URL;
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <CodeBackground />
         <Header />

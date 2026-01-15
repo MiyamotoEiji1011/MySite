@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="footer__content">
           {/* ロゴセクション */}
           <div className="footer__logo">
-            <a href="/">
-            <img src="/images/logos/logo_white.svg" alt="Logo" />
+            <a href={import.meta.env.BASE_URL}>
+            <img src={`${import.meta.env.BASE_URL}images/logos/logo_white.svg`} alt="Logo" />
             </a>
           </div>
 

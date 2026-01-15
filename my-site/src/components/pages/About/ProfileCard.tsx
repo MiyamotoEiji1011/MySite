@@ -90,8 +90,8 @@ export default function ProfileCard() {
         </svg>
       </div>
       <div className="card__avatar">
-        <img 
-          src="/images/profile/profile_image.png" 
+        <img
+          src={`${import.meta.env.BASE_URL}images/profile/profile_image.png`}
           alt="プロフィール画像" 
           style={{
             width: '128px',
